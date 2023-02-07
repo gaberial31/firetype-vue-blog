@@ -1,0 +1,54 @@
+@import "@/styles/_mixins"
+
+.profile 
+  background: $brand-white-1
+
+  .container 
+    max-width: 1000px
+
+    padding: 30px 25px
+    
+  &__info 
+    max-width: 510px
+
+    padding: 32px
+    margin: 32px auto
+
+    display: flex
+    flex-flow: column
+
+    &__initials 
+      text-align: center
+
+      display: flex
+      flex-flow: column
+      align-items: center
+      align-self: center
+
+      &__avatar
+        @include initials(120px, 120px, 32px, #fff,  $brand-gray-1)
+
+
+      .name 
+        margin-top: 15px
+
+        font-size: 20px
+        font-family: "Gilroy-Bold"
+        
+
+      .email 
+        margin-top: 2px
+
+        color: $brand-gray-2
+        
+
+    &__inputs 
+      margin-top: 35px
+
+      display: flex
+      flex-flow: column
+      gap: 20px
+      
+    button 
+      margin-top: 40px
+      align-self: center

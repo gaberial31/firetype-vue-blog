@@ -1,0 +1,44 @@
+.pagination 
+  display: flex
+  justify-content: center
+  gap: 5px
+
+  &:hover 
+
+    .prev
+      transform: translate(-30%, 0)
+
+    .next 
+      transform: translate(30%, 0)
+    
+    
+
+  &__item 
+    cursor: pointer
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    padding: 5px 10px
+    min-width: 30px
+
+    font-family: "Gilroy-Bold"
+
+    color: $brand-gray-1
+
+    border-radius: 5px
+
+    transition: background .3s, color .3s, transform .3s
+
+    &.active 
+      color: $brand-white-1
+      background: $brand-gray-1
+
+    &.disabled
+      pointer-events: none
+      opacity: .5
+
+    &:hover 
+      color: $brand-white-1
+      background: $brand-gray-1

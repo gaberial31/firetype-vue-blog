@@ -1,0 +1,156 @@
+.post-editor 
+  height: 40vh
+
+  display: flex
+  flex-flow: column
+
+  // Toolbar
+  :deep(.ql-toolbar)
+    padding: 10px 15px
+
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    gap: 20px
+
+    background: $brand-gray-1
+
+    border: 1px solid $brand-gray-1
+    border-radius: 5px 5px 0 0
+
+    .ql-formats
+      margin: 0
+      padding-right: 10px
+
+      display: flex
+      gap: 5px
+
+      // Toolbar labels
+      .ql-size, .ql-header, .ql-color, .ql-background, .ql-align
+        color: $brand-green-1
+
+        .ql-picker-label 
+          font-family: "Gilroy-Medium"
+
+          background: #4b5563
+          border-radius: 3px
+          border: none
+
+          transition: opacity .3s, background .3s
+
+          &:hover 
+            opacity: .8
+
+          &:before 
+            font-size: 13px
+
+          &.ql-active
+
+          .ql-fill
+            
+            rect, polygon, path
+              fill: #7e8ba1
+
+      // Toolbar options list
+      .ql-picker-options
+        top: 125%
+
+        background: #4b5563
+
+        border-radius: 5px
+        border: none
+
+        span 
+          border-bottom: 1px solid $brand-gray-1
+
+          transition: background .3s
+
+          &:hover 
+            background: #2f353d
+
+      // Toolbar buttons
+      button 
+        background: #4b5563
+        border-radius: 5px
+
+        transition: opacity .3s, background .3s
+
+        &:hover 
+          opacity: .8
+
+      // Active toolbar button
+      .ql-active
+        background: $brand-green-1 !important
+
+        svg
+
+          path, rect, polyline,  line, polygon
+            fill: none
+            stroke: #4b5563
+
+      // Toolbar icons
+      svg
+
+        .ql-stroke 
+          stroke: $brand-green-1
+
+        .ql-fill 
+          fill: $brand-green-1
+
+
+  // Toolbar editor
+  :deep(.ql-container)
+    height: 100%
+
+    display: flex
+    flex-flow: column
+
+    background: #fafafa
+
+    border: 1px solid $brand-gray-1
+    border-radius: 0 0 5px 5px
+
+    overflow: hidden
+
+    .ql-editor 
+      padding: 20px 16px 30px
+      overflow: auto
+
+      font-family: "Gilroy-Medium"
+
+    .blot-formatter
+
+      &__toolbar 
+        border-radius: 2px
+
+        &-button
+          border: none !important
+
+          width: 27px !important
+          height: 27px !important
+
+          background: $brand-gray-1
+
+          transition: filter .3s
+
+          svg 
+            cursor: pointer
+
+            padding: 3px
+
+            width: 27px !important
+            height: 27px !important
+
+            background: #4b5563 !important
+            border: none !important
+
+            line
+              stroke: $brand-green-1
+
+      &__resize-handle
+        border: 1px solid $brand-gray-1 !important
+        background-color: #4b5563 !important
+        opacity: 1 !important
+        border-radius: 50px
+
+

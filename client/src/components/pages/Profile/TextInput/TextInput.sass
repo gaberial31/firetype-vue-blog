@@ -1,0 +1,20 @@
+@import "@/styles/_mixins"
+  
+.input 
+  position: relative
+
+  label 
+    @include input-label
+
+  input 
+    @include input-clip-path
+
+    &:disabled
+      cursor: not-allowed
+      opacity: .8
+
+    &:focus 
+      outline: none
+
+  svg 
+    @include input-icon

@@ -1,0 +1,176 @@
+.header 
+  width: 100%
+
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)
+  z-index: 5
+
+  @media (min-width: 768px)
+    background: linear-gradient(68.5deg, $brand-gray-1 35%, transparent 35%), linear-gradient(111deg, transparent 65%, $brand-gray-1 65%)
+
+  &__wrapper 
+    height: 70px
+
+    padding: 0 15px
+
+    display: flex
+    flex-flow: row
+    align-items: center
+    justify-content: space-between
+
+  // * Logo section
+  img
+    height: 36px
+    width: 36px
+
+    order: 2
+
+    @media (min-width: 768px)
+      order: 0
+      flex: 2
+
+  .profile 
+    order: 1
+
+    @media (min-width: 768px)
+      order: 0
+
+  // * Navigation
+  &__nav 
+    height: 100%
+    
+    display: flex
+    align-items: center
+
+    flex: 1
+
+    &.left 
+      justify-content: flex-end
+
+      ul 
+
+        li
+          @media (min-width: 768px)
+            transform: skew(21deg)
+
+          a
+            @media (min-width: 768px)
+              transform: skew(-21deg)
+
+    &.right 
+      justify-content: flex-start
+
+      ul 
+
+        li
+          @media (min-width: 768px)
+            transform: skew(-21deg)
+
+          a
+            @media (min-width: 768px)
+              transform: skew(21deg)
+
+    ul
+      height: 100%
+      display: flex
+
+      li 
+        cursor: pointer
+
+        margin: 0 -1px
+        padding: 0 25px
+
+        background: $brand-gray-1
+
+        font-family: "Gilroy-Bold"
+        text-transform: uppercase
+
+        transition: background .3s
+
+        &:hover 
+          background: $brand-green-1
+
+          a
+            color: $brand-gray-1
+
+        // * Navigation link common styles
+        a
+          height: 100%
+
+          display: flex
+          align-items: center
+        
+          color: #fff
+
+          text-transform: uppercase
+
+          transition: color .3s
+
+
+
+    // * Mobile menu navigation button
+    &__menu-btn 
+      cursor: cursor
+
+      color: $brand-gray-1
+
+      height: 25px
+      width: 40px
+
+      order: 3
+
+      @media (min-width: 768px)
+        color: #fff
+      
+
+    // * Mobile navigation
+    &-mobile
+      position: fixed
+      top: 0
+      left: 0
+
+      padding: 20px 0
+
+      max-width: 250px
+      height: 100%
+      width: 70%
+      
+      background: $brand-gray-1
+
+      ul
+        display: flex
+        flex-flow: column
+
+        gap: 0
+
+        // * Mobile links
+        li 
+          padding: 18px 20px
+          border-bottom: 1px solid $brand-gray-4
+
+          &:first-child
+            border-top: 1px solid $brand-gray-4
+
+          &:hover 
+            background: #494949
+
+          a
+            color: #fff
+            text-transform: uppercase 
+
+
+
+// * Mobile nav animation
+.mobile-nav-enter-active, .mobile-nav-leave-active
+  transition: transform .4s
+
+.mobile-nav-enter-from
+  transform: translateX(-250px)
+
+.mobile-nav-enter-to
+  transform: translateX(0px)
+
+.mobile-nav-leave-to
+  transform: translateX(-250px)
+
+
+

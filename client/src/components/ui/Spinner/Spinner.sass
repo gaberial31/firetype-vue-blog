@@ -1,0 +1,42 @@
+.spinner 
+  z-index: 10
+
+  position: fixed
+  top: 0
+  left: 0
+
+  min-height: 100vh
+  width: 100%
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  background: rgba(0, 0, 0, .7)
+
+  will-change: transform
+
+  img 
+    width: 60px
+    height: 60px
+
+    filter: brightness(10)
+
+  span 
+    position: absolute
+
+    width: 120px
+    height: 120px
+
+    border: 3px solid transparent
+    border-top-color: #fff
+    border-bottom-color: #fff
+    border-radius: 50%
+
+    animation: spin  1s infinite
+
+
+// * Spinner animation
+@keyframes spin 
+  to
+    transform: rotateZ(360deg)

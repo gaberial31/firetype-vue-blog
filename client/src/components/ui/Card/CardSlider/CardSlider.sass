@@ -1,0 +1,31 @@
+.slider 
+  position: relative
+
+  padding: 80px 16px
+
+  display: flex
+  flex-flow: column
+
+  @media (min-width: 500px)
+    padding: 100px 120px 80px
+
+  &__controls
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    margin-bottom: 40px
+
+    h3
+      font-family: "Gilroy-Bold"
+      font-size: 24px
+
+  &__content
+    display: flex
+    flex-flow: row nowrap
+    gap: 32px
+
+    transition: transform .3s
+
+
+

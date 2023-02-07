@@ -1,0 +1,142 @@
+.post 
+  display: flex
+  flex-flow: column 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)
+
+  @media (min-width: 700px)
+    max-height: 700px
+    min-height: 700px 
+    min-width: 650px 
+    flex-flow: row 
+
+
+  // * Post text content
+  &__content 
+    display: flex 
+    flex-flow: column 
+    align-items: center
+    justify-content: center
+    flex: 4
+    order: 2
+
+    text-align: center
+
+
+    @media (min-width: 700px)
+      order: 1
+
+    @media (min-width: 800px)
+      flex: 3
+      text-align: left
+
+    &__wrapper 
+      max-width: 450px
+      padding: 72px 0
+      
+      @media (min-width: 768px)
+        padding: 0 24px
+
+      h2
+        display: -webkit-box
+        overflow: hidden
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 2
+        
+        word-break: break-word
+        text-transform: uppercase
+
+        font-family: "Gilroy-Bold" 
+        font-size: 32px 
+
+        margin-bottom: 24px
+
+        @media (min-width: 768px)
+          font-size: 40px
+
+      p
+        display: -webkit-box
+        overflow: hidden
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 4
+        word-break: break-word
+
+        line-height: 1.7
+        font-family: 'Gilroy-Light'
+        font-weight: 200
+        font-size: 16px
+
+        @media (min-width: 768px)
+          max-width: 350px
+
+      a
+        margin-top: 32px
+        padding-bottom: 4px
+
+        display: inline-flex
+        align-items: center
+
+        border-bottom: 1px solid transparent
+
+        font-family: "Gilroy-Bold"
+        text-transform: uppercase
+
+        transition: border .3s
+
+        &:hover 
+          border-bottom: 1px solid $brand-gray-1
+
+        svg 
+          margin-left: 8px
+
+  // * Post image
+  &__photo
+    position: relative
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    order: 1
+    flex: 3
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)
+
+    background: $brand-gray-1
+
+    @media (min-width: 700px) 
+      order: 2
+
+    @media (min-width: 800px) 
+      flex: 4
+
+    &:after 
+      z-index: 2
+      content: ""
+
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+
+      background-image: linear-gradient(0deg,rgba(0,0,0,.6) 0,rgba(0,0,0,.4) 50%,transparent 75%)
+
+    img
+      display: block 
+
+      width: 100%
+      height: 100%
+
+      object-fit: cover
+
+      &[lazy=loading]
+        width: 10%
+        height: 10%
+
+  &:nth-child(even)
+
+    .post__content
+      order: 2
+
+    .post__photo
+      order: 1
+    

@@ -1,0 +1,66 @@
+@mixin initials ($width, $height, $font-size: 14px, $color, $background) 
+  cursor: pointer
+
+  width: $width
+  height: $height
+
+  position: relative
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+  border-radius: 100px
+
+  font-family: "Gilroy-Bold"
+  font-size: $font-size
+  color: $color
+
+  background: $background
+
+  border: 1px solid $brand-gray-1
+
+// * Input in profile and admin pages
+
+@mixin input-clip-path
+  position: relative
+
+  height: 50px
+  width: 100%
+
+  padding: 8px 8px 8px 50px
+
+  font-family: "Gilroy-Medium"
+  font-size: 16px
+  color: #fff
+
+  border: none
+  border-radius: 2px
+  border-collapse: collapse
+  clip-path: polygon(3% 0, 100% 0, 100% 80%, 97% 100%, 0 100%, 0 20%)
+
+  @media (min-width: 768px)
+    padding: 8px 8px 8px 70px
+    background: linear-gradient(90deg, $brand-green-1 12%, transparent 12%) $brand-gray-1
+
+
+@mixin input-label
+  display: block
+
+  font-family: "Gilroy-Medium"
+  font-size: 14px
+
+  padding-bottom: 10px
+
+
+@mixin input-icon
+  z-index: 1
+
+  position: absolute
+  top: 44px
+  left: 20px
+          
+  color: $brand-green-1
+
+  @media (min-width: 768px)
+    color: $brand-gray-1

@@ -1,0 +1,131 @@
+.footer 
+  padding: 100px 25px
+  background: url("./assets/icons/handsup-background.svg") center 45% no-repeat, $brand-gray-1
+  background-size: 60%
+
+  @media (min-width: 768px)
+    clip-path: polygon(0 0, 15% 0, 20% 10%, 80% 10%, 85% 0, 100% 0, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%)
+
+  &__wrapper 
+    display: flex 
+    flex-flow: column
+
+    gap: 32px
+
+    @media (min-width: 768px)
+      flex-flow: row
+      gap: 0
+
+    div 
+      display: flex
+      flex: 1
+
+  // * Footer left block
+  &__left 
+    display: flex
+    flex-flow: column
+    align-items: center
+
+    gap: 32px
+
+    @media (min-width: 768px)
+      flex-flow: row
+      align-items: initial
+      gap: 0
+      
+  // * Footer right block
+  &__right
+    flex-flow: column 
+    align-items: center
+    gap: 32px 
+
+    color: #fff
+
+    @media (min-width: 768px)
+      align-items: flex-end
+      gap: 0
+
+    p
+      margin-top: auto
+
+  
+  // * Footer cols common styles
+  &__col-1, &__col-2
+    display: flex 
+    gap: 32px
+
+    @media (min-width: 768px)
+      gap: 0
+
+  &__col-1 
+    flex-flow: column
+
+  // * Footer logo
+  &__logo 
+    font-size: 20px
+
+    justify-content: center
+
+    @media (min-width: 768px)
+      justify-content: flex-start
+
+    a
+      display: flex 
+      flex-flow: row 
+      align-items: center
+
+      font-family: "Gilroy-Medium"
+
+    img 
+      filter: brightness(10)
+
+    span 
+      color: #fff
+      padding: 0 8px 0 0
+
+  // * Footer social icons list
+  &__social-icons 
+    margin-top: auto
+
+    display: flex 
+    align-items: center
+    gap: 16px
+
+    li
+      display: flex 
+      align-items: center
+
+      img 
+        width: 24px
+        height: auto
+        color: #fff
+
+        transition: opacity .3s
+
+        &:hover
+          opacity: .8
+
+  // * Footer navigation
+  &__nav 
+    height: 100%
+
+    ul 
+      display: flex
+      flex-flow: row wrap 
+      justify-content: center
+      gap: 16px
+
+      @media (min-width: 768px)
+        flex-flow: column
+        gap: 15px
+
+    a
+      font-family: "Gilroy-Medium"
+      color: #fff
+      transition: color .3s
+      text-transform: uppercase
+
+      &:hover 
+        color: #32cf02
+
+
