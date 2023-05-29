@@ -56,9 +56,6 @@ import "@vueup/vue-quill/dist/vue-quill.snow.css";
 // * Vue lazyload
 import VueLazyload from "vue-lazyload";
 
-// * Izi toast styles
-import "izitoast/dist/css/iziToast.min.css";
-
 createApp(App)
   .use(createPinia())
   .use(router)
