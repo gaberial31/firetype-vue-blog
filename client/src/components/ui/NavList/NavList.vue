@@ -14,7 +14,7 @@
 import { PropType } from "vue";
 
 // * Nav item interface
-import { navItem } from "./NavList.interface";
+import type { navItem } from "./NavList.interface";
 
 // * Nav items
 import navItems from "./NavList.data";
